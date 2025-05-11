@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authorsRouter from './routes/authors.js';
+import blogPostsRouter from './routes/blogPosts.js';
+
 
 
 dotenv.config();
@@ -12,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/authors', authorsRouter);
+app.use('/api/blogPosts', blogPostsRouter);
 
 export default app;
 // This code sets up an Express.js application with CORS and JSON parsing middleware.
